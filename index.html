@@ -12,13 +12,19 @@
         <div class="container">
             <div class="col-xs-12 text-center">
                 <form action="" method="POST">
+                    <select name="model_disp" id="model_disp_select" class="serial_input center-block">
+                        <option value="" selected hidden>Modelo</option>
+                        <option value="USFP-GB/SS13-4 1.25G RACM">USFP-GB/SS13-4 1.25G RACM</option>
+                        <option value="RC512-FE-S-SS13 10/100M RACM">RC512-FE-S-SS13 10/100M RACM</option>
+                        <option value="RAX711-L-4GC-AC_DC EDD RACM">RAX711-L-4GC-AC_DC EDD RACM</option>
+                    </select>
                     <input id="serial_num" type="text" class="serial_input center-block">
-                    <input id="send_serial" type="submit" value="Enviar Serial" class="center-block serial_input">
+                    <input id="send_serial" type="submit" value="Enviar Serial" class="serial_input center-block">
                 </form>
+                <br><button id="recharge" type="reset" class="center-block serial_input">Siguiente Serial</button>
                 <div id="resp" class="response">
                     <!-- Content from php -->
                 </div>
-                <br><button id="recharge" type="reset" class="center-block serial_input">Siguiente Serial</button>
             </div>
         </div>
         <script src="app/js/serial_proc.js"></script>

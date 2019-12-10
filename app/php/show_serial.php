@@ -13,11 +13,13 @@ if ($result = $conn->query($sql))
     while ($row = $result->fetch_assoc())
     {
         $id_serial = $row['id_serial'];
+        $model_disp = $row['model_disp'];
         $serial_disp = $row['serial_disp'];
     
         echo "
             <tr>
                 <td class='text-left'>$id_serial</td>
+                <td class='text-left'>$model_disp</td>
                 <td class='text-left'>$serial_disp</td>
             </tr>";
     }
