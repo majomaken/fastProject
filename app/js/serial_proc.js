@@ -1,8 +1,11 @@
 var serial_num = document.getElementById('serial_num');
 var send_serial_bott = document.getElementById('send_serial');
 var resp = document.getElementById('resp');
+var recharge_bott = document.getElementById("recharge");
 var count = 0;
-
+function recharge () {
+    location.reload();
+}
 function insert_data () {
     if(count === 0)
     {
@@ -41,3 +44,4 @@ function insert_data () {
 }
 
 send_serial_bott.addEventListener('click', insert_data, false);
+recharge_bott.addEventListener('click', recharge, false);
