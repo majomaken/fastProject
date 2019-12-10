@@ -6,7 +6,7 @@ if ($conn->connect_error) {
     die("La conexión ha fallado: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM serials";
+$sql = "SELECT * FROM serials ORDER BY serials.id_serial ASC";
 
 if ($result = $conn->query($sql)) 
 {
@@ -16,9 +16,10 @@ if ($result = $conn->query($sql))
         $serial_disp = $row['serial_disp'];
     
         echo "
-        <div class='inp_style_install'>
-                <input id='show_all_serials' value='$id_serial'> <br>$serial_disp
-        </div>";
+            <tr>
+                <td class='text-left'>$id_serial</td>
+                <td class='text-left'>$serial_disp</td>
+            </tr>";
     }
 
     /* liberar el conjunto de resultados */

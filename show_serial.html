@@ -5,10 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
+        <link rel="stylesheet" href="app/css/show.css">
     </head>
     <body>
-        <div id="all_serials"></div>
         <button id="refresh_page" type="button">Traer los últimos seriales</button>
+        <div class="table-title">
+            <h3>Seriales</h3>
+        </div>
+        <table class="table-fill">
+            <thead>
+                <tr>
+                    <th class="text-left">ID</th>
+                    <th class="text-left">Serial</th>
+                </tr>
+            </thead>
+            <tbody id="all_serials" class='table-hover'>
+            </tbody>
+        </table>
         <script src="app/js/show_serial.js"></script>
     </body>
 </html>
