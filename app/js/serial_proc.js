@@ -34,7 +34,7 @@ function insert_data () {
     else
     {
         event.preventDefault();
-        console.log('Ready insert')
+        console.log('Not insert')
         return false;
     }
 
