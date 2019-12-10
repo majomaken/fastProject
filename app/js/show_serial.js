@@ -1,8 +1,8 @@
 var refresh = document.getElementById("refresh_page");
 var show_div_serials = document.getElementById("all_serials");
 var serial_num = "0";
+show_data ();
 function show_data () {
-    event.preventDefault();
         console.log('Ready query')
         var serial_data= "serial_num="+serial_num;
         var ajx = new XMLHttpRequest()
